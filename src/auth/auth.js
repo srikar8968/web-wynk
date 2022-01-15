@@ -2,7 +2,7 @@
 export const authEndpoint = "https://accounts.spotify.com/authorize";
 // Replace with your app's client ID, redirect URI and desired scopes
 const clientId = "0aca88f58c4f445faefb51d56b4b374c";
-const redirectUri = "http://localhost:3000/";
+const redirectUri = "https://web-wynk.vercel.app/";
 const scopes = [
   "user-read-currently-playing",
   "user-read-recently-played",
