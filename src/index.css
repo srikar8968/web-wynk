@@ -1,13 +1,75 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+
+body::-webkit-scrollbar {
+  @apply bg-gray-900;
+}
+body::-webkit-scrollbar-button {
+  display: none;
+}
+body::-webkit-scrollbar-thumb {
+  @apply bg-gray-800;
+}
+button:focus {
+  outline: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@tailwind components;
+
+.btn {
+  @apply inline-block font-semibold shadow-md rounded-full bg-gradient-to-r text-gray-900 text-sm py-2 px-4 leading-tight from-yellow-700 to-red-700;
+}
+.btn:hover,
+.btn:focus {
+  @apply to-yellow-700;
+}
+.btn:focus {
+  outline: none;
+}
+.btn:active {
+  transform: scale(0.985);
+}
+
+@tailwind utilities;
+
+.ww_navbar.themed {
+  transition: background-color 0.2s linear;
+  transition-delay: 0.3s;
+}
+.ww_navbar.scrolled {
+  transition-delay: 0s !important;
+}
+
+.ww_carousel::-webkit-scrollbar {
+  @apply bg-gray-900;
+  height: 6px;
+}
+.ww_carousel::-webkit-scrollbar-button {
+  @apply hidden;
+}
+.ww_carousel::-webkit-scrollbar-thumb {
+  @apply bg-gray-800 rounded-full hidden;
+}
+.ww_carousel:hover::-webkit-scrollbar-thumb {
+  display: block;
+}
+.ww_carousel:before,
+.ww_carousel:after {
+  content: "";
+  @apply w-8 absolute top-0 h-full z-20;
+}
+.ww_carousel:before {
+  left: 0;
+  background-image: linear-gradient(
+    to right,
+    rgba(28, 25, 23, 1),
+    rgba(28, 25, 23, 0)
+  );
+}
+.ww_carousel:after {
+  right: 0;
+  background-image: linear-gradient(
+    to left,
+    rgba(28, 25, 23, 1),
+    rgba(28, 25, 23, 0)
+  );
 }

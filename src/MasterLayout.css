@@ -1,0 +1,10 @@
+.master_lay {
+  flex: 1 0 auto;
+}
+
+.master_lay .content {
+  width: calc(100% - 16rem);
+}
+.master_lay .content.themed {
+  transition: all 0.3s linear;
+}

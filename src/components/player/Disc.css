@@ -1,0 +1,27 @@
+.dscWrapper .dscContainer {
+  transform: rotate(0deg);
+  transform-origin: center;
+  animation: rotate 2s linear 0.3s infinite;
+  animation-play-state: paused;
+}
+
+.dscWrapper.play .dscContainer {
+  animation-play-state: running;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.dscWrapper .dscTools {
+  transform: rotate(25deg);
+  transition: transform 0.3s ease-in;
+}
+.dscWrapper.play .dscTools {
+  transform: rotate(-8deg);
+}

@@ -1,0 +1,22 @@
+.sng_item:hover .sng_img {
+  background-size: 170px;
+}
+.sng_item:first-child {
+  margin-left: 0;
+}
+.sng_item .sng_play {
+  bottom: 8px;
+  right: -40px;
+  transition: all 0.2s ease-in;
+}
+.sng_item:hover .sng_play {
+  right: 8px;
+}
+.sng_item:hover .sng_title {
+  @apply text-gray-300;
+}
+.sng_item,
+.sng_img {
+  background-size: 160px;
+  transition: all 0.2s ease-in;
+}

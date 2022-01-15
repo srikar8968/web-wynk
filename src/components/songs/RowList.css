@@ -1,0 +1,6 @@
+.trackrow:hover .trackSortId {
+  display: none;
+}
+.trackrow:hover .pltrack_btn {
+  display: block;
+}
